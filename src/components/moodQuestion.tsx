@@ -1,35 +1,49 @@
 import React, { CSSProperties } from "react";
+import Happy from "../assets/happy.png";
+import Angry from "../assets/angry.png";
+import Bored from "../assets/bored.png";
+import Sad from "../assets/sad.png";
+import "./moodQuestion.css";
 function MoodQuestion() {
   return (
-    <div style={moodContainer}>
-      <div style={title}>
-        <h2>how are you today?</h2>
-      </div>
+    <div style={container}>
+      <div style={moodContainer}>
+        <div style={title}>
+          <h2>how are you today?</h2>
+        </div>
 
-      <div style={moodBoard}>
-        <img src="../assets/happy.png" alt="happy" />
-        <img src="../assets/sad.png" alt="sad" />
-        <img src="../assets/bored.png" alt="bored" />
-        <img src="../assets/angry.png" alt="angry" />
+        <div style={moodBoard}>
+          <img className="happy" src={Happy} />
+          <div className="hide">Happy</div>
+          <img src={Angry} />
+          <img src={Bored} />
+          <img src={Sad} />
+        </div>
       </div>
     </div>
   );
 }
-const moodContainer: CSSProperties = {
+const container: CSSProperties = {
+  marginTop: "10rem",
   display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
+const moodContainer: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
 };
 
 const title: CSSProperties = {
   display: "flex",
-  color: "orange",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "2rem",
 };
 const moodBoard: CSSProperties = {
-  border: "solid pink 5px",
-  height: "15rem",
-  width: "30rem",
+  height: "4rem",
   display: "flex",
+  justifyContent: "space-between",
 };
 
 export default MoodQuestion;
