@@ -16,7 +16,6 @@ const containerStyle: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   borderRadius: ".3rem",
-  marginTop: "2rem",
 };
 
 const contentStyle: CSSProperties = {
@@ -28,6 +27,7 @@ const contentStyle: CSSProperties = {
   justifyContent: "center",
   display: "flex",
   flexDirection: "column",
+  marginTop: "2.5rem",
 };
 
 export default MoodBoard;
