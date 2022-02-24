@@ -13,7 +13,7 @@ function StartPage(props: any) {
             </p>
             <h3>Let's start, what's your name?</h3>
             <input style={inputStyle} onChange={newInput => props.nameInput(newInput.target.value)}></input>
-            <button style={buttonStyle}>Go!</button>
+            <button style={buttonStyle} onClick={() => props.onClick()}>Go!</button>
         </div>
     </div> 
   );

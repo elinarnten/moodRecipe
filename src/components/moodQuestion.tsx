@@ -4,12 +4,12 @@ import Angry from "../assets/angry.png";
 import Bored from "../assets/bored.png";
 import Sad from "../assets/sad.png";
 import "./moodQuestion.css";
-function MoodQuestion() {
+function MoodQuestion(props: any) {
   return (
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>Hello , how are you today?</h2>
+          <h2>Hello {props.print} , how are you today?</h2>
         </div>
 
         <div style={moodBoard}>
