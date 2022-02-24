@@ -9,7 +9,7 @@ function MoodQuestion() {
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>how are you today?</h2>
+          <h2>Hello , how are you today?</h2>
         </div>
 
         <div style={moodBoard}>
