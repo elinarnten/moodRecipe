@@ -9,15 +9,22 @@ import MoodBoard from "./moodBoard";
 function Layout() {
   const [inputNameValue, setInputNameValue] = useState('');
   console.log(inputNameValue);
+  const [value, setValue] = useState('');
+
+  const printValue = () => {
+    setValue(inputNameValue); 
+  } 
+
   return( 
     <>
   <Header />
-  <StartPage nameInput={setInputNameValue}/> 
-  </>
+  <StartPage nameInput={setInputNameValue} onClick={printValue}/> 
+  
     <div>
-      <MoodQuestion />
+      <MoodQuestion print={value}/>
       <MoodBoard />
     </div>
+    </>
 );
 }
 

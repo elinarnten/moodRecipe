@@ -1,5 +1,6 @@
 import { CSSProperties } from "react";
-import Happy from "../assets/Happy.png";
+import Happy from "../assets/happy.png";
+
 
 function MoodBoard() {
   return (
