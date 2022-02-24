@@ -2,6 +2,7 @@ import { useState } from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./header";
+import MoodQuestion from "./moodQuestion";
 import StartPage from "./startPage";
 import MoodBoard from "./moodBoard";
 
@@ -14,7 +15,7 @@ function Layout() {
   <StartPage nameInput={setInputNameValue}/> 
   </>
     <div>
-      <Header />
+      <MoodQuestion />
       <MoodBoard />
     </div>
 );
