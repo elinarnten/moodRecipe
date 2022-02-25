@@ -18,6 +18,7 @@ function App() {
         <Route path="/happy" element={<Happy />} />
         <Route path="/sad" element={<Sad />} />
         <Route path="/angry" element={<Angry />} />
+
         <Route path="/bored" element={<Bored />} />
       </Routes>
     </BrowserRouter>
