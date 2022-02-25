@@ -9,7 +9,7 @@ function MoodQuestion(props: any) {
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>Hello {props.value} , how are you today?</h2>
+          <h2>Hello {this.state.inputNameValue} , how are you today?</h2>
         </div>
 
         <div style={moodBoard}>
