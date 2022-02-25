@@ -8,7 +8,7 @@ function MoodBoard() {
   return (
     <div style={containerStyle}>
       <div style={contentStyle}>
-        <img src={Happy} />
+        <img src={Happy} alt="happyEmoji" />
         <h1>You feel happy!</h1>
         <div style={{ display: "flex", gap: "2rem" }}>
           <div style={{ paddingTop: "1rem" }}>
@@ -17,7 +17,7 @@ function MoodBoard() {
               Tacos
             </div>
             <div className="foodTwo" style={{ paddingTop: "1.5rem" }}>
-              Plock
+              Popcorn
             </div>
             <div className="foodThree" style={{ paddingTop: "1.5rem" }}>
               Marängswiss
@@ -25,9 +25,21 @@ function MoodBoard() {
           </div>
 
           <div style={{ padding: "1rem", marginTop: "2rem" }}>
-            <img src={Intern} style={{ width: "80px", height: "110px" }} />
-            <img src={Holiday} style={{ width: "80px", height: "110px" }} />
-            <img src={Enchanto} style={{ width: "80px", height: "110px" }} />
+            <img
+              src={Intern}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px", marginRight: "1rem" }}
+            />
+            <img
+              src={Holiday}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px", marginRight: "1rem" }}
+            />
+            <img
+              src={Enchanto}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px" }}
+            />
           </div>
           <div style={{ paddingTop: "1rem" }}>
             <span style={textStyle}>Movies that matches Your mood:</span>
