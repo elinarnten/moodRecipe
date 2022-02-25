@@ -1,13 +1,59 @@
 import { CSSProperties } from "react";
 import Happy from "../assets/happy.png";
-
+import Intern from "../assets/theIntern.jpg";
+import Holiday from "../assets/theholiday_cover.jpg";
+import Enchanto from "../assets/enchanto_cover.jpg";
 
 function MoodBoard() {
   return (
     <div style={containerStyle}>
       <div style={contentStyle}>
-        <img src={Happy} />
+        <img src={Happy} alt="happyEmoji" />
         <h1>You feel happy!</h1>
+        <div style={{ display: "flex", gap: "2rem" }}>
+          <div style={{ paddingTop: "1rem" }}>
+            <span style={textStyle}> Food that matches Your mood:</span>
+            <div className="foodOne" style={{ paddingTop: "1rem" }}>
+              Tacos
+            </div>
+            <div className="foodTwo" style={{ paddingTop: "1.5rem" }}>
+              Popcorn
+            </div>
+            <div className="foodThree" style={{ paddingTop: "1.5rem" }}>
+              Marängswiss
+            </div>
+          </div>
+
+          <div style={{ padding: "1rem", marginTop: "2rem" }}>
+            <img
+              src={Intern}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px", marginRight: "1rem" }}
+            />
+            <img
+              src={Holiday}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px", marginRight: "1rem" }}
+            />
+            <img
+              src={Enchanto}
+              alt="moviecover"
+              style={{ width: "80px", height: "110px" }}
+            />
+          </div>
+          <div style={{ paddingTop: "1rem" }}>
+            <span style={textStyle}>Movies that matches Your mood:</span>
+            <div className="movieOne" style={{ paddingTop: "1rem" }}>
+              The Holiday
+            </div>
+            <div className="movieTwo" style={{ paddingTop: "1.5rem" }}>
+              Enchanto
+            </div>
+            <div className="movieThree" style={{ paddingTop: "1.5rem" }}>
+              The Intern
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -22,13 +68,18 @@ const containerStyle: CSSProperties = {
 const contentStyle: CSSProperties = {
   backgroundColor: "rgba(255, 255, 255, 0.4)",
   borderRadius: ".3rem",
-  width: "60%",
+  width: "70%",
   height: "80vh",
   alignItems: "center",
   justifyContent: "center",
   display: "flex",
   flexDirection: "column",
   marginTop: "2.5rem",
+};
+
+const textStyle: CSSProperties = {
+  fontWeight: "bold",
+  flex: "1",
 };
 
 export default MoodBoard;
