@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { CSSProperties } from "react";
+import { Link } from "react-router-dom";
+import MoodQuestion from "./moodQuestion";
 
-function StartPage(props: any) {
+function StartPage() {
+
+  const [inputNameValue, setInputNameValue] = useState('');
+  console.log(inputNameValue);
+  const [value, setValue] = useState('');
+
+  const printValueAndNavigate = () => {
+    setValue(inputNameValue);
+    /* path: "/moodQuestion";
+    state: value;; */
+  } 
+
+
   return (
     <div style={divContainer}> 
         <div style={divContent}>
@@ -12,8 +26,10 @@ function StartPage(props: any) {
                 allowed to be angry, if you're happy you should be allowed to be happy.
             </p>
             <h3>Let's start, what's your name?</h3>
-            <input style={inputStyle} onChange={newInput => props.nameInput(newInput.target.value)}></input>
-            <button style={buttonStyle} onClick={() => props.onClick()}>Go!</button>
+            <input style={inputStyle} onChange={newInput => setInputNameValue(newInput.target.value)}></input>
+            <Link to="/moodQuestion">
+              <button style={buttonStyle} onClick={() => printValueAndNavigate()}>Go!</button>
+            </Link>
         </div>
     </div> 
   );
