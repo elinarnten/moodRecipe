@@ -8,10 +8,10 @@ function MoodBoard() {
         <img src={Happy} />
         <h1>You feel happy!</h1>
         <div style={{ display: "flex", gap: "2rem" }}>
-          <div style={{ gap: "2rem" }}>
-            <div className="foodOne">Food 1</div>
-            <div className="foodTwo">Food 2 </div>
-            <div className="foodThree">Food 3 </div>
+          <div>
+            <div className="foodOne">Food</div>
+            <div className="foodTwo">Food </div>
+            <div className="foodThree">Food </div>
           </div>
 
           <div>
@@ -20,9 +20,9 @@ function MoodBoard() {
             <div className="moviePic" style={boxStyle} />
           </div>
           <div>
-            <div className="movieOne">Movie 1</div>
-            <div className="movieTwo">Movie 2</div>
-            <div className="movieThree">Movie 3</div>
+            <div className="movieOne">feel-good</div>
+            <div className="movieTwo">feel-good</div>
+            <div className="movieThree">feel-good</div>
           </div>
         </div>
       </div>
