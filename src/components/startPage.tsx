@@ -1,20 +1,11 @@
-import React, { useState } from "react";
+import { HookCallbacks } from "async_hooks";
+import React from "react";
+import { useState } from "react";
 import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import MoodQuestion from "./moodQuestion";
 
-function StartPage() {
-
-  const [inputNameValue, setInputNameValue] = useState('');
-  console.log(inputNameValue);
-  const [value, setValue] = useState('');
-
-  const printValueAndNavigate = () => {
-    setValue(inputNameValue);
-    /* path: "/moodQuestion";
-    state: value;; */
-  } 
-
+function StartPage(props: any) {
 
   return (
     <div style={divContainer}> 
@@ -26,10 +17,8 @@ function StartPage() {
                 allowed to be angry, if you're happy you should be allowed to be happy.
             </p>
             <h3>Let's start, what's your name?</h3>
-            <input style={inputStyle} onChange={newInput => setInputNameValue(newInput.target.value)}></input>
-            <Link to="/moodQuestion">
-              <button style={buttonStyle} onClick={() => printValueAndNavigate()}>Go!</button>
-            </Link>
+            <input style={inputStyle} onChange={newInput => props.nameInput(newInput.target.value)}></input>
+            <button style={buttonStyle} onClick={() => props.isVisible(false)}>Go!</button>
         </div>
     </div> 
   );
@@ -71,3 +60,7 @@ const buttonStyle: CSSProperties = {
 };
 
 export default StartPage;
+
+function useHistory() {
+  throw new Error("Function not implemented.");
+}
