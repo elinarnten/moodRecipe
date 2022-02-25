@@ -1,5 +1,8 @@
 import { CSSProperties } from "react";
 import Happy from "../assets/happy.png";
+import Intern from "../assets/theIntern.jpg";
+import Holiday from "../assets/theholiday_cover.jpg";
+import Enchanto from "../assets/enchanto_cover.jpg";
 
 function MoodBoard() {
   return (
@@ -8,21 +11,35 @@ function MoodBoard() {
         <img src={Happy} />
         <h1>You feel happy!</h1>
         <div style={{ display: "flex", gap: "2rem" }}>
-          <div>
-            <div className="foodOne">Food</div>
-            <div className="foodTwo">Food </div>
-            <div className="foodThree">Food </div>
+          <div style={{ paddingTop: "1rem" }}>
+            <span style={textStyle}> Food that matches Your mood:</span>
+            <div className="foodOne" style={{ paddingTop: "1rem" }}>
+              Tacos
+            </div>
+            <div className="foodTwo" style={{ paddingTop: "1.5rem" }}>
+              Plock
+            </div>
+            <div className="foodThree" style={{ paddingTop: "1.5rem" }}>
+              Marängswiss
+            </div>
           </div>
 
-          <div>
-            <div className="moviePic" style={boxStyle} />
-            <div className="moviePic" style={boxStyle} />
-            <div className="moviePic" style={boxStyle} />
+          <div style={{ padding: "1rem", marginTop: "2rem" }}>
+            <img src={Intern} style={{ width: "80px", height: "110px" }} />
+            <img src={Holiday} style={{ width: "80px", height: "110px" }} />
+            <img src={Enchanto} style={{ width: "80px", height: "110px" }} />
           </div>
-          <div>
-            <div className="movieOne">feel-good</div>
-            <div className="movieTwo">feel-good</div>
-            <div className="movieThree">feel-good</div>
+          <div style={{ paddingTop: "1rem" }}>
+            <span style={textStyle}>Movies that matches Your mood:</span>
+            <div className="movieOne" style={{ paddingTop: "1rem" }}>
+              The Holiday
+            </div>
+            <div className="movieTwo" style={{ paddingTop: "1.5rem" }}>
+              Enchanto
+            </div>
+            <div className="movieThree" style={{ paddingTop: "1.5rem" }}>
+              The Intern
+            </div>
           </div>
         </div>
       </div>
@@ -39,7 +56,7 @@ const containerStyle: CSSProperties = {
 const contentStyle: CSSProperties = {
   backgroundColor: "rgba(255, 255, 255, 0.4)",
   borderRadius: ".3rem",
-  width: "60%",
+  width: "70%",
   height: "80vh",
   alignItems: "center",
   justifyContent: "center",
@@ -48,11 +65,9 @@ const contentStyle: CSSProperties = {
   marginTop: "2.5rem",
 };
 
-const boxStyle: CSSProperties = {
-  backgroundColor: "lightgrey",
-  height: "2rem",
-  width: "2rem",
-  marginBottom: "1rem",
+const textStyle: CSSProperties = {
+  fontWeight: "bold",
+  flex: "1",
 };
 
 export default MoodBoard;
