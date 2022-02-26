@@ -6,12 +6,12 @@ import Sad from "../assets/sad.png";
 import "./moodQuestion.css";
 import { Link } from "react-router-dom";
 
-function MoodQuestion(props: any) {
+function NewMoodQuestion() {
   return (
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>Hello {props.name}, how are you today?</h2>
+          <h2>Hey, did your mode suddenly change?</h2>
         </div>
 
         <div style={moodBoard}>
@@ -59,4 +59,4 @@ const moodBoard: CSSProperties = {
   justifyContent: "space-between",
 };
 
-export default MoodQuestion;
+export default NewMoodQuestion;
