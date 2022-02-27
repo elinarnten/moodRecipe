@@ -13,11 +13,22 @@ function MoodQuestion(props: any) {
         </div>
 
         <div style={moodBoard}>
-          <img className="happy" src={Happy} />
-          <div className="hide">Happy</div>
-          <img src={Angry} />
-          <img src={Bored} />
-          <img src={Sad} />
+          <div className="hej">
+            <img className="happy" src={Happy} />
+            <p>Happy</p>
+          </div>
+          <div className="hello">
+            <img className="angry" src={Angry} />
+            <p>Angry</p>
+          </div>
+          <div>
+            <img className="bored" src={Bored} />
+            <p>Bored</p>
+          </div>
+          <div>
+            <img className="sad" src={Sad} />
+            <p>Sad</p>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +52,12 @@ const title: CSSProperties = {
   margin: "2rem",
 };
 const moodBoard: CSSProperties = {
-  height: "4rem",
+  position: "relative",
+  textAlign: "center",
+  display: "flex",
+  justifyContent: "space-between",
+};
+const moodNames: CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
 };
