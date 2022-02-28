@@ -7,17 +7,23 @@ import Happy from "./happy";
 import Angry from "./angry";
 import Sad from "./sad";
 import Bored from "./bored";
+import NewMoodQuestion from "./newMoodQuestion";
 
 function App() {
   return (
-    <>
+    <div style={{ background: "rgb(255, 255, 255, 0.2)", height: "100vh" }}>
       <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} />
+          <Route path="/newMoodQuestion" element={<NewMoodQuestion />} />
+          <Route path="/happy" element={<Happy />} />
+          <Route path="/angry" element={<Angry />} />
+          <Route path="/sad" element={<Sad />} />
+          <Route path="/bored" element={<Bored />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

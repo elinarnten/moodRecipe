@@ -1,8 +1,9 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 import Intern from "../assets/theIntern.jpg";
 import Holiday from "../assets/theholiday_cover.jpg";
 import Enchanto from "../assets/enchanto_cover.jpg";
 import happy from "../assets/happy.png";
+import { Link } from "react-router-dom";
 
 function Happy() {
   return (
@@ -42,6 +43,9 @@ function Happy() {
             </div>
           </div>
         </div>
+        <Link to={"/NewMoodQuestion"}>
+          <button style={backButton}>BACK!</button>
+        </Link>
       </div>
     </div>
   );
@@ -76,6 +80,16 @@ const coverStyle: CSSProperties = {
   width: "80px",
   height: "110px",
   marginRight: "1rem",
+};
+
+const backButton: CSSProperties = {
+  border: "none",
+  background: "none",
+  height: "2rem",
+  width: "2rem",
+  color: "#333",
+  margin: "1rem",
+  fontWeight: "bold",
 };
 
 export default Happy;
