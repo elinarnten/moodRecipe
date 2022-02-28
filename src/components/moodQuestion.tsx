@@ -16,22 +16,22 @@ function MoodQuestion(props: any) {
         <div style={moodBoard}>
           <div className="hover-content">
             <img src={Happy} alt="Happy" />
-            <div>Happy</div>
+            <div className="happy">Happy</div>
           </div>
 
           <div className="hover-content">
             <img src={Angry} alt="Angry" />
-            <div>Angry</div>
+            <div className="angry">Angry</div>
           </div>
 
           <div className="hover-content">
             <img src={Bored} alt="Bored" />
-            <div>Bored</div>
+            <div className="bored">Bored</div>
           </div>
 
           <div className="hover-content">
             <img src={Sad} alt="Sad" />
-            <div>Sad</div>
+            <div className="sad">Sad</div>
           </div>
         </div>
       </div>
