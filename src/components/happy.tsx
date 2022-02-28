@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 import Intern from "../assets/theIntern.jpg";
 import Holiday from "../assets/theholiday_cover.jpg";
 import Enchanto from "../assets/enchanto_cover.jpg";
