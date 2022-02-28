@@ -28,22 +28,19 @@ function Happy() {
 
   // holidays = data.dagar.filter((day) => day.helgdag);
 
-  fetch(
-    "https://unogsng.p.rapidapi.com/images?netflixid=81037848&offset=3&limit=2",
-    {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "unogsng.p.rapidapi.com",
-        "x-rapidapi-key": "510ecc4db2msh19c1d9eca136e4ap15bf98jsncf38b9e2cab6",
-      },
-    }
-  )
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+  // fetch("https://data-imdb1.p.rapidapi.com/titles/utils/genres", {
+  //   method: "GET",
+  //   headers: {
+  //     "x-rapidapi-host": "data-imdb1.p.rapidapi.com",
+  //     "x-rapidapi-key": "510ecc4db2msh19c1d9eca136e4ap15bf98jsncf38b9e2cab6",
+  //   },
+  // })
+  //   .then((response) => {
+  //     console.log(response);
+  //   })
+  //   .catch((err) => {
+  //     console.error(err);
+  //   });
   return (
     <div style={containerStyle}>
       <div style={contentStyle}>
