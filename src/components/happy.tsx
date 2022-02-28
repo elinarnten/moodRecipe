@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import Intern from "../assets/theIntern.jpg";
 import Holiday from "../assets/theholiday_cover.jpg";
 import Enchanto from "../assets/enchanto_cover.jpg";
@@ -6,6 +6,21 @@ import happy from "../assets/happy.png";
 import { Link } from "react-router-dom";
 
 function Happy() {
+  /* const [title, setTitle] = useState(null);
+  const [image, setImage] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.unsplash.com/search/photos?page=1&query=happy")
+      .then((response) => response.json())
+      .then((data) => setImage(data.orientation));
+  });
+  console.log(setImage); */
+  /*    , {
+      headers: {
+        Authorization: "Client-ID L61SkoqjI5B_4qSGc2LQ-MLt4SBO4Eq-fcOIMaZbxqo",
+      },
+    }); */
+
   return (
     <div style={containerStyle}>
       <div style={contentStyle}>
