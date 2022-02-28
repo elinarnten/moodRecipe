@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import Intern from "../assets/theIntern.jpg";
 import Holiday from "../assets/theholiday_cover.jpg";
 import Enchanto from "../assets/enchanto_cover.jpg";
@@ -6,6 +6,44 @@ import happy from "../assets/happy.png";
 import { Link } from "react-router-dom";
 
 function Happy() {
+  // useEffect(() => {
+  //   const url =
+  //     "https://unogsng.p.rapidapi.com/images?netflixid=81037848&offset=3&limit=2";
+
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(url);
+  //       const json = await response.json();
+  //       console.log(json);
+  //     } catch (error) {
+  //       console.log("error", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
+  // const response = await fetch(
+  //   `https://sholiday.faboul.se/dagar/v2.1/${year}/${month}`
+  // );
+  // const data = await response.json();
+
+  // holidays = data.dagar.filter((day) => day.helgdag);
+
+  fetch(
+    "https://unogsng.p.rapidapi.com/images?netflixid=81037848&offset=3&limit=2",
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "unogsng.p.rapidapi.com",
+        "x-rapidapi-key": "510ecc4db2msh19c1d9eca136e4ap15bf98jsncf38b9e2cab6",
+      },
+    }
+  )
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
   return (
     <div style={containerStyle}>
       <div style={contentStyle}>
