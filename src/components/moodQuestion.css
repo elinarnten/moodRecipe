@@ -1,7 +1,32 @@
-.hide {
-  display: none;
+.hover-content {
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-
-.happy:hover + .hide {
-  display: block;
+.hover-content div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.hover-content img {
+  height: 4rem;
+}
+.hover-content:hover div {
+  visibility: visible;
+  opacity: 0.7;
+}
+.hover-content:hover img {
+  filter: brightness(150%);
+  filter: blur(1px);
+}
+.happy,
+.sad,
+.bored,
+.angry {
+  font-weight: bold;
 }
