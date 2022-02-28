@@ -4,33 +4,43 @@ import Angry from "../assets/angry.png";
 import Bored from "../assets/bored.png";
 import Sad from "../assets/sad.png";
 import "./moodQuestion.css";
+import { Link } from "react-router-dom";
+
 
 function MoodQuestion(props: any) {
   return (
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>Hello {props.value} , how are you today?</h2>
+          <h2>Hello {props.name}, how are you today?</h2>
         </div>
 
         <div style={moodBoard}>
           <div className="hover-content">
+            <Link to="/happy">
             <img src={Happy} alt="Happy" />
+            </Link>
             <div className="happy">Happy</div>
           </div>
 
           <div className="hover-content">
+            <Link to={"/angry"}>
             <img src={Angry} alt="Angry" />
+            </Link>
             <div className="angry">Angry</div>
           </div>
 
           <div className="hover-content">
+            <Link to={"/bored"}>
             <img src={Bored} alt="Bored" />
+            </Link>
             <div className="bored">Bored</div>
           </div>
 
           <div className="hover-content">
+            <Link to={"/sad"}>
             <img src={Sad} alt="Sad" />
+            </Link>
             <div className="sad">Sad</div>
           </div>
         </div>
@@ -38,12 +48,14 @@ function MoodQuestion(props: any) {
     </div>
   );
 }
+
 const container: CSSProperties = {
   marginTop: "10rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 };
+
 const moodContainer: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
@@ -55,6 +67,7 @@ const title: CSSProperties = {
   justifyContent: "center",
   margin: "2rem",
 };
+
 const moodBoard: CSSProperties = {
   textAlign: "center",
   display: "flex",
