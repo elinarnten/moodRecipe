@@ -1,45 +1,20 @@
-/* .happy {
+.hover-content {
   position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.hide {
-  display: none;
+.hover-content div {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
 }
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-}
-.happy:hover + .hide {
-  display: block;
-}
-.happy:hover {
-  border-color: aqua solid 20px;
-} */
-.happy,
-.angry,
-.bored,
-.sad {
+.hover-content img {
   height: 4rem;
-  justify-content: space-between;
 }
-.happy p,
-.angry p,
-.bored p,
-.sad p {
-  font-size: larger;
-  font-weight: bolder;
-}
-
-.hej p {
-  background-color: rgba(255, 255, 255, 0.39);
-  border-radius: 5px;
-}
-.hej img:hover {
-  background-color: rgba(255, 255, 255, 0.39);
-  border-radius: 10px;
-}
-.hello:hover {
-  background-color: rgba(255, 255, 255, 0.39);
-  border-radius: 5px;
+.hover-content:hover div {
+  visibility: visible;
+  opacity: 0.7;
 }

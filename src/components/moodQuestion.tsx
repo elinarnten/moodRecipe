@@ -4,6 +4,7 @@ import Angry from "../assets/angry.png";
 import Bored from "../assets/bored.png";
 import Sad from "../assets/sad.png";
 import "./moodQuestion.css";
+
 function MoodQuestion(props: any) {
   return (
     <div style={container}>
@@ -13,21 +14,24 @@ function MoodQuestion(props: any) {
         </div>
 
         <div style={moodBoard}>
-          <div className="hej">
-            <img className="happy" src={Happy} />
-            <p>Happy</p>
+          <div className="hover-content">
+            <img src={Happy} alt="Happy" />
+            <div>Happy</div>
           </div>
-          <div className="hello">
-            <img className="angry" src={Angry} />
-            <p>Angry</p>
+
+          <div className="hover-content">
+            <img src={Angry} alt="Angry" />
+            <div>Angry</div>
           </div>
-          <div>
-            <img className="bored" src={Bored} />
-            <p>Bored</p>
+
+          <div className="hover-content">
+            <img src={Bored} alt="Bored" />
+            <div>Bored</div>
           </div>
-          <div>
-            <img className="sad" src={Sad} />
-            <p>Sad</p>
+
+          <div className="hover-content">
+            <img src={Sad} alt="Sad" />
+            <div>Sad</div>
           </div>
         </div>
       </div>
@@ -52,12 +56,7 @@ const title: CSSProperties = {
   margin: "2rem",
 };
 const moodBoard: CSSProperties = {
-  position: "relative",
   textAlign: "center",
-  display: "flex",
-  justifyContent: "space-between",
-};
-const moodNames: CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
 };
