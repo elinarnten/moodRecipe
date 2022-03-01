@@ -23,6 +23,8 @@
 .hover-content:hover img {
   filter: brightness(150%);
   filter: blur(1px);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.1rem whitesmoke;
 }
 .happy,
 .sad,
