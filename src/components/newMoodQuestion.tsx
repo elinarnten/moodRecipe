@@ -15,19 +15,33 @@ function NewMoodQuestion() {
         </div>
 
         <div style={moodBoard}>
-          <Link to="/happy">
-            <img className="happy" src={Happy} />
-          </Link>
-          <div className="hide">Happy</div>
-          <Link to={"/angry"}>
-            <img src={Angry} />
-          </Link>
-          <Link to={"/bored"}>
-            <img src={Bored} />
-          </Link>
-          <Link to={"/sad"}>
-            <img src={Sad} />
-          </Link>
+          <div className="hover-content">
+            <Link to="/happy">
+              <img src={Happy} alt="Happy" />
+            </Link>
+            <div className="happy">Happy</div>
+          </div>
+
+          <div className="hover-content">
+            <Link to={"/angry"}>
+              <img src={Angry} alt="Angry" />
+            </Link>
+            <div className="angry">Angry</div>
+          </div>
+
+          <div className="hover-content">
+            <Link to={"/bored"}>
+              <img src={Bored} alt="Bored" />
+            </Link>
+            <div className="bored">Bored</div>
+          </div>
+
+          <div className="hover-content">
+            <Link to={"/sad"}>
+              <img src={Sad} alt="Sad" />
+            </Link>
+            <div className="sad">Sad</div>
+          </div>
         </div>
       </div>
     </div>
@@ -54,7 +68,7 @@ const title: CSSProperties = {
 };
 
 const moodBoard: CSSProperties = {
-  height: "4rem",
+  textAlign: "center",
   display: "flex",
   justifyContent: "space-between",
 };
