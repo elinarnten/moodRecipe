@@ -18,29 +18,29 @@ function NewMoodQuestion() {
           <div className="hover-content">
             <Link to="/happy">
               <img src={Happy} alt="Happy" />
+              <div className="happy">Happy</div>
             </Link>
-            <div className="happy">Happy</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/angry"}>
               <img src={Angry} alt="Angry" />
+              <div className="angry">Angry</div>
             </Link>
-            <div className="angry">Angry</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/bored"}>
               <img src={Bored} alt="Bored" />
+              <div className="bored">Bored</div>
             </Link>
-            <div className="bored">Bored</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/sad"}>
               <img src={Sad} alt="Sad" />
+              <div className="sad">Sad</div>
             </Link>
-            <div className="sad">Sad</div>
           </div>
         </div>
       </div>
