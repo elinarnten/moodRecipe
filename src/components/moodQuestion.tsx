@@ -6,7 +6,6 @@ import Sad from "../assets/sad.png";
 import "./moodQuestion.css";
 import { Link } from "react-router-dom";
 
-
 function MoodQuestion(props: any) {
   return (
     <div style={container}>
@@ -18,28 +17,28 @@ function MoodQuestion(props: any) {
         <div style={moodBoard}>
           <div className="hover-content">
             <Link to="/happy">
-            <img src={Happy} alt="Happy" />
+              <img src={Happy} alt="Happy" />
             </Link>
             <div className="happy">Happy</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/angry"}>
-            <img src={Angry} alt="Angry" />
+              <img src={Angry} alt="Angry" />
             </Link>
             <div className="angry">Angry</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/bored"}>
-            <img src={Bored} alt="Bored" />
+              <img src={Bored} alt="Bored" />
             </Link>
             <div className="bored">Bored</div>
           </div>
 
           <div className="hover-content">
             <Link to={"/sad"}>
-            <img src={Sad} alt="Sad" />
+              <img src={Sad} alt="Sad" />
             </Link>
             <div className="sad">Sad</div>
           </div>

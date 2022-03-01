@@ -8,8 +8,10 @@ import Angry from "./angry";
 import Sad from "./sad";
 import Bored from "./bored";
 import NewMoodQuestion from "./newMoodQuestion";
+import { useState } from "react";
 
 function App() {
+  const [name, setName] = useState("");
   return (
     <div style={{ background: "rgb(255, 255, 255, 0.4)" }}>
       <Header />
