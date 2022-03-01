@@ -4,9 +4,9 @@ import holiday from "../assets/theholiday_cover.jpg";
 import enchanto from "../assets/enchanto_cover.jpg";
 import angry from "../assets/angry.png";
 import { Link } from "react-router-dom";
-import icecream from "../assets/sad-ice-cream.jpg";
-import popcorn from "../assets/sad-popcorn.jpg";
-import donut from "../assets/sad-donut.jpg";
+import pizza from "../assets/angry-pizza.jpg";
+import milkshake from "../assets/angry-milkshake.jpg";
+import candy from "../assets/angry-candy.jpg";
 import "./moodView.css";
 
 function Angry() {
@@ -26,30 +26,30 @@ function Angry() {
               </div>
               <div>
                 <div id="text">
-                  <h3>Ice Cream</h3>
+                  <h3>Pizza</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={icecream} alt="icecream" />
+                <img src={pizza} alt="pizza" />
               </div>
               <div>
                 <div id="text">
-                  <h3>Donuts</h3>
+                  <h3>Milkshake</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={donut} alt="donut" />
+                <img src={milkshake} alt="milkshake" />
               </div>
               <div>
                 <div id="text">
-                  <h3>Popcorn</h3>
+                  <h3>Candy</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={popcorn} alt="popcorn" />
+                <img src={candy} alt="candy" />
               </div>
             </div>
           </div>
