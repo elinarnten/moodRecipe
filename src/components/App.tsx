@@ -11,7 +11,7 @@ import NewMoodQuestion from "./newMoodQuestion";
 
 function App() {
   return (
-    <div style={{ background: "rgb(255, 255, 255, 0.2)", height: "100vh" }}>
+    <div style={{ background: "rgb(255, 255, 255, 0.4)" }}>
       <Header />
       <BrowserRouter>
         <Routes>
