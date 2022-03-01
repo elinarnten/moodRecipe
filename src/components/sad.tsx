@@ -14,8 +14,11 @@ function Sad() {
         <img src={sad} alt="sadEmoji" />
         <h1>You feel sad!</h1>
         <div style={{ display: "flex", gap: "1rem", flexDirection: "column" }}>
-          <span style={textStyle}> Food that matches your mood:</span>
-
+          {/*  <span style={textStyle}> Food that matches your mood:</span> */}
+          <div style={headings}>
+            <h3>Food that matches your mood:</h3>
+            <h3>Movies that matches your mood:</h3>
+          </div>
           <div style={contentBlock}>
             <div style={foodBlock}>
               <div style={foodOne}>
@@ -71,8 +74,13 @@ function Sad() {
   );
 }
 
+const headings: CSSProperties = {
+  display: "flex",
+};
+
 const contentBlock: CSSProperties = {
   display: "flex",
+  gap: "1rem",
 };
 
 const foodBlock: CSSProperties = {
@@ -132,8 +140,8 @@ const containerStyle: CSSProperties = {
 };
 
 const contentStyle: CSSProperties = {
-  backgroundColor: "rgba(255, 255, 255, 0.4)",
-  borderRadius: ".3rem",
+  /*  backgroundColor: "rgba(255, 255, 255, 0.4)",
+  borderRadius: ".3rem", */
   width: "70%",
   height: "80vh",
   alignItems: "center",
@@ -142,14 +150,7 @@ const contentStyle: CSSProperties = {
   flexDirection: "column",
   marginTop: "2.5rem",
 };
-const textStyle: CSSProperties = {
-  fontWeight: "bold",
-  flex: "1",
-};
 
-const foodMovieStyle: CSSProperties = {
-  paddingTop: "1rem",
-};
 const coverStyle: CSSProperties = {
   width: "80px",
   height: "110px",
