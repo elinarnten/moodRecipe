@@ -3,9 +3,9 @@ import holiday from "../assets/theholiday_cover.jpg";
 import enchanto from "../assets/enchanto_cover.jpg";
 import bored from "../assets/bored.png";
 import { Link } from "react-router-dom";
-import icecream from "../assets/sad-ice-cream.jpg";
-import popcorn from "../assets/sad-popcorn.jpg";
-import donut from "../assets/sad-donut.jpg";
+import hamburger from "../assets/bored-hamburger.jpg";
+import cookies from "../assets/bored-cookies.jpg";
+import pancakes from "../assets/bored-pancakes.jpg";
 import "./moodView.css";
 
 function Bored() {
@@ -25,30 +25,30 @@ function Bored() {
               </div>
               <div>
                 <div id="text">
-                  <h3>Ice Cream</h3>
+                  <h3>Hamburger</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={icecream} alt="icecream" />
+                <img src={hamburger} alt="hamburger" />
               </div>
               <div>
                 <div id="text">
-                  <h3>Donuts</h3>
+                  <h3>Pancakes</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={donut} alt="donut" />
+                <img src={pancakes} alt="pancakes" />
               </div>
               <div>
                 <div id="text">
-                  <h3>Popcorn</h3>
+                  <h3>Cookies</h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={popcorn} alt="popcorn" />
+                <img src={cookies} alt="cookies" />
               </div>
             </div>
           </div>

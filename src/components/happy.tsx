@@ -4,9 +4,9 @@ import holiday from "../assets/theholiday_cover.jpg";
 import enchanto from "../assets/enchanto_cover.jpg";
 import happy from "../assets/happy.png";
 import { Link } from "react-router-dom";
-import chips from "../assets/chips.jpg";
-import pasta from "../assets/pasta.jpg";
-import cupcakes from "../assets/cupcakes.jpg";
+import chips from "../assets/happy-chips.jpg";
+import pasta from "../assets/happy-pasta.jpg";
+import cupcakes from "../assets/happy-cupcakes.jpg";
 import "./moodView.css";
 
 function Happy() {
@@ -31,7 +31,7 @@ function Happy() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </div>
-                <img src={pasta} alt="pastadish" />
+                <img src={pasta} alt="pasta" />
               </div>
               <div>
                 <div id="text">
