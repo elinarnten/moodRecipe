@@ -16,7 +16,6 @@ function Angry() {
       .then((response) => response.json())
       .then((data) => setMovieData(data.results));
   };
-  console.log(movieData);
 
   useEffect(() => {
     fetchData();
@@ -71,13 +70,13 @@ function Angry() {
               <div>
                 <h2>Movies that matches your mood:</h2>
               </div>
-              {movieData.map((item: any, index) => {
-                if (index >= 3) return null;
-                if ((item.genre_ids = 27))
+              {movieData.map((item: any, idx: number) => {
+                if (idx >= 9 && idx <= 11) {
                   return (
                     <div key={item.id}>
                       <img
                         src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                        alt="movie cover"
                       ></img>
                       <div id="text">
                         <h3>{item.title}</h3>
@@ -88,6 +87,7 @@ function Angry() {
                       </div>
                     </div>
                   );
+                }
               })}
             </div>
           </div>

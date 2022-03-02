@@ -16,7 +16,6 @@ function Sad() {
       .then((response) => response.json())
       .then((data) => setMovieData(data.results));
   };
-  console.log(movieData);
 
   useEffect(() => {
     fetchData();
@@ -71,21 +70,24 @@ function Sad() {
               <div>
                 <h2>Movies that matches your mood:</h2>
               </div>
-              {movieData.map((item: any, index) => {
-                if (index >= 3) return null;
-                return (
-                  <div key={item.id}>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                    ></img>
-                    <div id="text">
-                      <h3>{item.title}</h3>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      </p>
+              {movieData.map((item: any, idx: number) => {
+                if (idx >= 6 && idx <= 8) {
+                  return (
+                    <div key={item.id}>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                        alt="movie cover"
+                      ></img>
+                      <div id="text">
+                        <h3>{item.title}</h3>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
+                  );
+                }
               })}
             </div>
           </div>
