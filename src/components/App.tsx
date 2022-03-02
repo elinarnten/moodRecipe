@@ -16,17 +16,22 @@ function App() {
   const [name, setName] = useState("");
   return (
     <div style={{ background: "rgb(255, 255, 255, 0.4)" }}>
-      <Header />
       <ErrorBoundary>
+        <ErrorBoundary>
+          <Header />
+        </ErrorBoundary>
+
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />} />
-            <Route path="/newMoodQuestion" element={<NewMoodQuestion />} />
-            <Route path="/happy" element={<Happy />} />
-            <Route path="/angry" element={<Angry />} />
-            <Route path="/sad" element={<Sad />} />
-            <Route path="/bored" element={<Bored />} />
-          </Routes>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Layout />} />
+              <Route path="/newMoodQuestion" element={<NewMoodQuestion />} />
+              <Route path="/happy" element={<Happy />} />
+              <Route path="/angry" element={<Angry />} />
+              <Route path="/sad" element={<Sad />} />
+              <Route path="/bored" element={<Bored />} />
+            </Routes>
+          </ErrorBoundary>
         </BrowserRouter>
       </ErrorBoundary>
     </div>
