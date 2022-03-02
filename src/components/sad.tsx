@@ -1,6 +1,3 @@
-import intern from "../assets/theIntern.jpg";
-import holiday from "../assets/theholiday_cover.jpg";
-import enchanto from "../assets/enchanto_cover.jpg";
 import sad from "../assets/sad.png";
 import icecream from "../assets/sad-ice-cream.jpg";
 import popcorn from "../assets/sad-popcorn.jpg";
