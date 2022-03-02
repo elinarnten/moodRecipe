@@ -14,7 +14,7 @@ function NewMoodQuestion() {
           <h2>Hey, did your mode suddenly change?</h2>
         </div>
 
-        <div style={moodBoard}>
+        <div className="moods" style={moodBoard}>
           <div className="hover-content">
             <Link to="/happy">
               <img src={Happy} alt="Happy" />

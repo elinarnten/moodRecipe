@@ -21,11 +21,11 @@ function StartPage(props: any) {
         <h3>Let's start, what's your name?</h3>
         <input
           style={inputStyle}
-          onChange={(newInput) => props.nameInput(newInput.target.value)}
+          onChange={(newInput) => props.user(newInput.target.value)}
         ></input>
-        <button style={buttonStyle} onClick={() => props.isVisible(false)}>
-          GO!
-        </button>
+        <Link to={"/moodQuestion"}>
+          <button style={buttonStyle}>GO!</button>
+        </Link>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ function StartPage(props: any) {
 const divContainer: CSSProperties = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center",
+  /* alignItems: "center", */
 };
 
 const divContent: CSSProperties = {

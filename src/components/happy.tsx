@@ -76,6 +76,7 @@ function Happy() {
               </div>
               {movieData.map((item: any, index) => {
                 if (index >= 3) return null;
+
                 return (
                   <div key={item.id}>
                     <img

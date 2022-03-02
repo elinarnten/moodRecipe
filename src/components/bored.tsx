@@ -76,8 +76,7 @@ function Bored() {
               </div>
 
               {movieData.map((item: any, index) => {
-                const genre = 12;
-                if ((item.genre_ids = genre)) if (index >= 3) return null;
+                if (index >= 3) return null;
                 return (
                   <div key={item.id}>
                     <img

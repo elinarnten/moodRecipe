@@ -14,7 +14,7 @@ function MoodQuestion(props: any) {
           <h2>Hello {props.name}, how are you today?</h2>
         </div>
 
-        <div style={moodBoard}>
+        <div className="moods" style={moodBoard}>
           <div className="hover-content">
             <Link to="/happy">
               <img src={Happy} alt="Happy" />
@@ -49,15 +49,20 @@ function MoodQuestion(props: any) {
 }
 
 const container: CSSProperties = {
-  marginTop: "10rem",
+  //marginTop: "10rem",
   display: "flex",
-  alignItems: "center",
+  //alignItems: "center",
   justifyContent: "center",
 };
 
 const moodContainer: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
+  display: "flex",
+  flexDirection: "column",
+  textAlign: "center",
+  marginTop: "4rem",
+  color: "#333",
 };
 
 const title: CSSProperties = {
