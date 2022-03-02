@@ -1,6 +1,3 @@
-import intern from "../assets/theIntern.jpg";
-import holiday from "../assets/theholiday_cover.jpg";
-import enchanto from "../assets/enchanto_cover.jpg";
 import bored from "../assets/bored.png";
 import { Link } from "react-router-dom";
 import hamburger from "../assets/bored-hamburger.jpg";
