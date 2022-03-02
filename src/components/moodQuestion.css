@@ -31,6 +31,7 @@
 .bored,
 .angry {
   font-weight: bold;
+  color: black;
 }
 
 @media (max-width: 400px) {
