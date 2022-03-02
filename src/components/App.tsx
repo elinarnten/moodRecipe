@@ -16,28 +16,26 @@ import StartPage from "./startPage";
 function App() {
   const [name, setName] = useState("");
   return (
-
     <div>
-      <Header />
       <ErrorBoundary>
         <ErrorBoundary>
           <Header />
         </ErrorBoundary>
         <BrowserRouter>
           <ErrorBoundary>
-          <Routes>
-            <Route path="/" element={<StartPage user={setName} />} />
-            <Route
-              path="/moodQuestion"
-              element={<MoodQuestion name={name} />}
-            />
-            <Route path="/newMoodQuestion" element={<NewMoodQuestion />} />
-            <Route path="/happy" element={<Happy />} />
-            <Route path="/angry" element={<Angry />} />
-            <Route path="/sad" element={<Sad />} />
-            <Route path="/bored" element={<Bored />} />
-          </Routes>
- </ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<StartPage user={setName} />} />
+              <Route
+                path="/moodQuestion"
+                element={<MoodQuestion name={name} />}
+              />
+              <Route path="/newMoodQuestion" element={<NewMoodQuestion />} />
+              <Route path="/happy" element={<Happy />} />
+              <Route path="/angry" element={<Angry />} />
+              <Route path="/sad" element={<Sad />} />
+              <Route path="/bored" element={<Bored />} />
+            </Routes>
+          </ErrorBoundary>
         </BrowserRouter>
       </ErrorBoundary>
     </div>
