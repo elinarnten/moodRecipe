@@ -1,9 +1,5 @@
-import { HookCallbacks } from "async_hooks";
-import React from "react";
-import { useState } from "react";
 import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import MoodQuestion from "./moodQuestion";
 
 function StartPage(props: any) {
   return (
