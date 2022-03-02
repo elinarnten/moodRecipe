@@ -1,6 +1,6 @@
 # Create React App <br>
 
-In this project we have created a web-application by using React-App and Typescript. <br>
+In this project we have created a web-application by using create-react-app and Typescript. <br>
 There are three contributors that have worked on this project: <br>
 [Elin Arntén](https://github.com/elinarnten) <br>
 [Rosanna Pistone](https://github.com/rosannapistone) <br>
