@@ -3,5 +3,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
-  /* height: 100vh; */
+  height: 100vh;
+}
+
+@media (max-width: 700px) {
+  body {
+    background-size: auto;
+  }
 }

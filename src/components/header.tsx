@@ -10,8 +10,8 @@ function Header() {
 }
 
 const headerStyle: CSSProperties = {
-  height: "3.5rem",
-  backgroundColor: "rgba(255, 255, 255, 0.7)",
+  height: "3rem",
+  backgroundColor: "rgba(255, 255, 255, 0.8)",
   display: "flex",
   alignItems: "center",
 };

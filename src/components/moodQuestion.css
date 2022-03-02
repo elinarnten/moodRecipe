@@ -32,3 +32,10 @@
 .angry {
   font-weight: bold;
 }
+
+@media (max-width: 400px) {
+  .moods {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
