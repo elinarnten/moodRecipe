@@ -16,10 +16,15 @@ import StartPage from "./startPage";
 function App() {
   const [name, setName] = useState("");
   return (
+
     <div>
       <Header />
       <ErrorBoundary>
+        <ErrorBoundary>
+          <Header />
+        </ErrorBoundary>
         <BrowserRouter>
+          <ErrorBoundary>
           <Routes>
             <Route path="/" element={<StartPage user={setName} />} />
             <Route
@@ -32,6 +37,7 @@ function App() {
             <Route path="/sad" element={<Sad />} />
             <Route path="/bored" element={<Bored />} />
           </Routes>
+ </ErrorBoundary>
         </BrowserRouter>
       </ErrorBoundary>
     </div>
