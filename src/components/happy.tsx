@@ -1,4 +1,3 @@
-import { CSSProperties, useState } from "react";
 import intern from "../assets/theIntern.jpg";
 import holiday from "../assets/theholiday_cover.jpg";
 import enchanto from "../assets/enchanto_cover.jpg";
@@ -8,8 +7,24 @@ import chips from "../assets/chips.jpg";
 import pasta from "../assets/pasta.jpg";
 import cupcakes from "../assets/cupcakes.jpg";
 import "./moodView.css";
+import { useEffect, useState } from "react";
 
 function Happy() {
+  const [movieData, setMovieData] = useState<any[]>([]);
+
+  const fetchData = () => {
+    fetch(
+      "https://api.themoviedb.org/3/movie/popular?api_key=656c9b3e8e475ff723ad264a23f043e6&language=en-US&page=1"
+    )
+      .then((response) => response.json())
+      .then((data) => setMovieData(data.results));
+  };
+  console.log(movieData);
+
+  useEffect(() => {
+    fetchData();
+  }, [setMovieData]);
+
   return (
     <div className="container">
       <div className="content">
@@ -59,33 +74,22 @@ function Happy() {
               <div>
                 <h2>Movies that matches your mood:</h2>
               </div>
-              <div>
-                <img src={intern} alt="moviecover" />
-                <div id="text">
-                  <h3>The Intern</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div>
-                <img src={holiday} alt="moviecover" />
-                <div id="text">
-                  <h3>The Holiday</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
-              <div>
-                <img src={enchanto} alt="moviecover" />
-                <div id="text">
-                  <h3>Enchanto</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                </div>
-              </div>
+              {movieData.map((item: any, index) => {
+                if (index >= 3) return null;
+                return (
+                  <div key={item.id}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                    ></img>
+                    <div id="text">
+                      <h3>{item.title}</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
