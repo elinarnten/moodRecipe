@@ -59,6 +59,7 @@ const buttonStyle: CSSProperties = {
   width: "2rem",
   color: "#333",
   margin: "1rem",
+  padding: ".2rem",
   fontWeight: "bold",
 };
 

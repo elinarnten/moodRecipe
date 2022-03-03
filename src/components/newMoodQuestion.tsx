@@ -11,7 +11,7 @@ function NewMoodQuestion() {
     <div style={container}>
       <div style={moodContainer}>
         <div style={title}>
-          <h2>Hey, did your mode suddenly change?</h2>
+          <h2>Hey, did your mood suddenly change?</h2>
         </div>
 
         <div className="moods" style={moodBoard}>

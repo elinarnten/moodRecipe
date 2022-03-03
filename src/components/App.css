@@ -1,13 +1,9 @@
 body {
-  background-image: url(../assets/background.png);
+  background: url(../assets/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
-}
 
-@media (max-width: 700px) {
-  body {
-    background-size: auto;
-  }
+  height: 100vh;
 }
