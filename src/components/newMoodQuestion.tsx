@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import Happy from "../assets/happy.png";
 import Angry from "../assets/angry.png";
 import Bored from "../assets/bored.png";
