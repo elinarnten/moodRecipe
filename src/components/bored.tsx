@@ -21,6 +21,10 @@ function Bored() {
     fetchData();
   }, [setMovieData]);
 
+  const filteredMovieData = movieData.filter((item: any) =>
+    item.genre_ids.includes(16)
+  );
+
   return (
     <div className="container">
       <div className="content">
@@ -71,24 +75,22 @@ function Bored() {
                 <h2>Movies that matches your mood:</h2>
               </div>
 
-              {movieData.map((item: any, idx: number) => {
-                if (idx >= 3 && idx <= 5) {
-                  return (
-                    <div key={item.id}>
-                      <img
-                        src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-                        alt="movie cover"
-                      ></img>
-                      <div id="text">
-                        <h3>{item.title}</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit.
-                        </p>
-                      </div>
+              {filteredMovieData.map((item: any, index) => {
+                if (index >= 3) return null;
+                return (
+                  <div key={item.id}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                      alt="movie cover"
+                    ></img>
+                    <div id="text">
+                      <h3>{item.title}</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </p>
                     </div>
-                  );
-                }
+                  </div>
+                );
               })}
             </div>
           </div>
